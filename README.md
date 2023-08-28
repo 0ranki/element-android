@@ -1,5 +1,7 @@
 # Volfram
 
+![logo](https://github.com/0ranki/volfram/blob/volfram/resources/img/volfram-logo.png?raw=true)
+
 This is a fork of Element Android, with slight modifications mainly to the UI.
 
 ### Current changes:
