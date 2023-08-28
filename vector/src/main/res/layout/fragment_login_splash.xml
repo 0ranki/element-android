@@ -37,7 +37,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/element_logo_green"
+            android:src="@drawable/element_logo_black"
             android:transitionName="loginLogoTransition" />
 
         <ImageView
@@ -47,7 +47,7 @@
             android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/element_logotype"
-            app:tint="?colorSecondary"
+            app:tint="@color/palette_black_900"
             tools:ignore="MissingPrefix" />
 
     </LinearLayout>
