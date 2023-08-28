@@ -133,7 +133,7 @@ object ThemeUtils {
      */
     fun setActivityTheme(activity: Activity, otherThemes: ActivityOtherThemes) {
         when (getApplicationTheme(activity)) {
-            SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(activity.resources)) activity.setTheme(otherThemes.dark)
+            SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(activity.resources)) activity.setTheme(otherThemes.black)
             THEME_DARK_VALUE -> activity.setTheme(otherThemes.dark)
             THEME_BLACK_VALUE -> activity.setTheme(otherThemes.black)
         }
@@ -202,7 +202,7 @@ object ThemeUtils {
     @StyleRes
     private fun themeToRes(context: Context, theme: String): Int =
             when (theme) {
-                SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(context.resources)) R.style.Theme_Vector_Dark else R.style.Theme_Vector_Light
+                SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(context.resources)) R.style.Theme_Vector_Black else R.style.Theme_Vector_Light
                 THEME_DARK_VALUE -> R.style.Theme_Vector_Dark
                 THEME_BLACK_VALUE -> R.style.Theme_Vector_Black
                 else -> R.style.Theme_Vector_Light
