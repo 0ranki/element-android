@@ -57,14 +57,14 @@ object ConfigurationModule {
         }
         return when (config) {
             Analytics.Disabled -> AnalyticsConfig(isEnabled = false, "", "", "", "", "")
-            is Analytics.Enabled -> AnalyticsConfig(isEnabled = false, "", "", "", "", "")
-//                    isEnabled = true,
-//                    postHogHost = config.postHogHost,
-//                    postHogApiKey = config.postHogApiKey,
-//                    policyLink = config.policyLink,
-//                    sentryDSN = config.sentryDSN,
-//                    sentryEnvironment = config.sentryEnvironment
-//            )
+            is Analytics.Enabled -> AnalyticsConfig(
+                    isEnabled = true,
+                    postHogHost = config.postHogHost,
+                    postHogApiKey = config.postHogApiKey,
+                    policyLink = config.policyLink,
+                    sentryDSN = config.sentryDSN,
+                    sentryEnvironment = config.sentryEnvironment
+            )
         }
     }
 
