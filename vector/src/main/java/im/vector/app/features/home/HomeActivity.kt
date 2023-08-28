@@ -317,7 +317,7 @@ class HomeActivity :
     }
 
     private fun handleShowAnalyticsOptIn() {
-        navigator.openAnalyticsOptIn(this)
+//        navigator.openAnalyticsOptIn(this)
     }
 
     /**
