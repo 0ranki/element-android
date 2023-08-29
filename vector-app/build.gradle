@@ -39,7 +39,7 @@ ext.versionMinor = 6
 // is the value for the next regular release.
 ext.versionPatch = 5
 // Volfram specific version number
-ext.versionVfrm = 1
+ext.versionVfrm = 2
 
 static def getGitTimestamp() {
     def cmd = 'git show -s --format=%ct'
@@ -105,7 +105,7 @@ static def gitBranchName() {
 
 // For Google Play build, build on any other branch than main will have a "-dev" suffix
 static def getGplayVersionSuffix() {
-    if (gitBranchName() == "main") {
+    if (gitBranchName() == "volfram") {
         return ""
     } else {
         return "-dev"
@@ -269,6 +269,7 @@ android {
                 optimizeCode true
                 proguardFiles 'proguard-rules.pro'
             }
+            signingConfig signingConfigs.release
             // signingConfig signingConfigs.release
         }
 
