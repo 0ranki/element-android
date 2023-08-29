@@ -156,7 +156,7 @@ class MessageActionsEpoxyController @Inject constructor(
                     id("e2e_deleted")
                     showProgress(false)
                     text(host.stringProvider.getString(R.string.encrypted_by_deleted))
-                    drawableStart(R.drawable.ic_shield_gray)
+                    drawableStart(R.drawable.ic_shield_warning_small)
                 }
             }
             E2EDecoration.NONE -> {
