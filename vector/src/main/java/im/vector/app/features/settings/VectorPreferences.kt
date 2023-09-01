@@ -306,6 +306,8 @@ class VectorPreferences @Inject constructor(
                 SETTINGS_SECURITY_USE_FLAG_SECURE,
                 SETTINGS_SECURITY_INCOGNITO_KEYBOARD_PREFERENCE_KEY,
 
+                SETTINGS_LABS_HIDE_SHIELDS_KEY,
+
                 ShortcutsHandler.SHARED_PREF_KEY,
         )
     }
@@ -1222,8 +1224,7 @@ class VectorPreferences @Inject constructor(
      * Indicates if the encryption shields in rooms next to messages are hidden
      */
     fun isShieldVisibilityDisabled() : Boolean {
-        return vectorFeatures.isShieldVisibilityDisabled() &&
-            defaultPrefs.getBoolean(SETTINGS_LABS_HIDE_SHIELDS_KEY, getDefault(R.bool.settings_labs_hide_shields_default))
+        return defaultPrefs.getBoolean(SETTINGS_LABS_HIDE_SHIELDS_KEY, getDefault(R.bool.settings_labs_hide_shields_default))
     }
 
     /**
