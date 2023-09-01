@@ -96,10 +96,6 @@ class VectorSettingsLabsFragment :
             }
         }
 
-        findPreference<VectorSwitchPreference>(VectorPreferences.SETTINGS_LABS_HIDE_SHIELDS_KEY)?.let { pref ->
-            pref.isChecked = vectorFeatures.isShieldVisibilityDisabled()
-        }
-
         findPreference<VectorSwitchPreference>(VectorPreferences.SETTINGS_LABS_VOICE_BROADCAST_KEY)?.let { pref ->
             // Voice Broadcast recording is not available on Android < 10
             pref.isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && vectorFeatures.isVoiceBroadcastEnabled()

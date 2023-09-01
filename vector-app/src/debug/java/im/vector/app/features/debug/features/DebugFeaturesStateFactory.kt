@@ -86,6 +86,11 @@ class DebugFeaturesStateFactory @Inject constructor(
                                 factory = VectorFeatures::isNewAppLayoutFeatureEnabled
                         ),
                         createBooleanFeature(
+                                label = "Disable Encryption Shields",
+                                key = DebugFeatureKeys.shieldVisibilityDisabled,
+                                factory = VectorFeatures::isShieldVisibilityDisabled
+                        ),
+                        createBooleanFeature(
                                 label = "Enable QR Code Login",
                                 key = DebugFeatureKeys.qrCodeLoginEnabled,
                                 factory = VectorFeatures::isQrCodeLoginEnabled
