@@ -13,5 +13,3 @@ Idea is to stay close to Element, but introduce changes that make the app a bit 
 - New icon, name and logo to differentiate from upstream and allow simultaneous install
 
 All credits belong to devs of https://github.com/vector-im/element-android, I barely know what I'm doing with Kotlin.
-
-Prebuilt APKs can be downloaded from https://cloud.oranki.net/s/volfram. Use at your own risk.
