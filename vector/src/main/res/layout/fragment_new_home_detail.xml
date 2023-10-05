@@ -115,7 +115,7 @@
         app:layout_constraintBottom_toTopOf="@id/newLayoutCreateChatButton"
         app:layout_constraintEnd_toEndOf="@id/newLayoutCreateChatButton"
         app:layout_constraintStart_toStartOf="@id/newLayoutCreateChatButton"
-        app:tint="?attr/colorPrimary"
+        app:tint="?vctr_content_primary"
         tools:targetApi="lollipop_mr1"
         tools:visibility="visible" />
 
