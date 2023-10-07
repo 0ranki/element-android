@@ -70,6 +70,7 @@ class VectorPreferences @Inject constructor(
         const val SETTINGS_BACKGROUND_SYNC_DIVIDER_PREFERENCE_KEY = "SETTINGS_BACKGROUND_SYNC_DIVIDER_PREFERENCE_KEY"
         const val SETTINGS_LABS_PREFERENCE_KEY = "SETTINGS_LABS_PREFERENCE_KEY"
         const val SETTINGS_LABS_NEW_APP_LAYOUT_KEY = "SETTINGS_LABS_NEW_APP_LAYOUT_KEY"
+        const val SETTINGS_LABS_HIDE_SHIELDS_KEY = "SETTINGS_LABS_HIDE_SHIELDS_KEY"
         const val SETTINGS_LABS_DEFERRED_DM_KEY = "SETTINGS_LABS_DEFERRED_DM_KEY"
         const val SETTINGS_LABS_RICH_TEXT_EDITOR_KEY = "SETTINGS_LABS_RICH_TEXT_EDITOR_KEY"
         const val SETTINGS_LABS_NEW_SESSION_MANAGER_KEY = "SETTINGS_LABS_NEW_SESSION_MANAGER_KEY"
@@ -1215,6 +1216,14 @@ class VectorPreferences @Inject constructor(
     fun isNewAppLayoutEnabled(): Boolean {
         return vectorFeatures.isNewAppLayoutFeatureEnabled() &&
                 defaultPrefs.getBoolean(SETTINGS_LABS_NEW_APP_LAYOUT_KEY, getDefault(R.bool.settings_labs_new_app_layout_default))
+    }
+
+    /**
+     * Indicates if the encryption shields in rooms next to messages are hidden
+     */
+    fun isShieldVisibilityDisabled() : Boolean {
+        return vectorFeatures.isShieldVisibilityDisabled() &&
+            defaultPrefs.getBoolean(SETTINGS_LABS_HIDE_SHIELDS_KEY, getDefault(R.bool.settings_labs_hide_shields_default))
     }
 
     /**

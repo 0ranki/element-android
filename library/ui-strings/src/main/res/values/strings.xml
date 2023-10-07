@@ -463,6 +463,9 @@
     <string name="labs_enable_new_app_layout_title">Enable new layout</string>
     <string name="labs_enable_new_app_layout_summary">A simplified Element with optional tabs</string>
 
+    <string name="labs_enable_hide_shields_title">Hide encryption shields</string>
+    <string name="labs_enable_hide_shields_summary">Hide encryption shields next to messages in rooms</string>
+
     <string name="labs_enable_deferred_dm_title">Enable deferred DMs</string>
     <string name="labs_enable_deferred_dm_summary">Create DM only on first message</string>
 

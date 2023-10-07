@@ -26,6 +26,7 @@ import im.vector.app.features.home.room.detail.timeline.item.MessageInformationD
 import im.vector.app.features.home.room.detail.timeline.item.ReferencesInfoData
 import im.vector.app.features.home.room.detail.timeline.item.SendStateDecoration
 import im.vector.app.features.home.room.detail.timeline.style.TimelineMessageLayoutFactory
+import im.vector.app.features.settings.VectorPreferences
 import org.matrix.android.sdk.api.extensions.orFalse
 import org.matrix.android.sdk.api.session.Session
 import org.matrix.android.sdk.api.session.crypto.model.MessageVerificationState
@@ -55,6 +56,7 @@ class MessageInformationDataFactory @Inject constructor(
         private val messageLayoutFactory: TimelineMessageLayoutFactory,
         private val reactionsSummaryFactory: ReactionsSummaryFactory,
         private val pollResponseDataFactory: PollResponseDataFactory,
+        private val vectorPreferences: VectorPreferences,
 ) {
 
     fun create(params: TimelineItemFactoryParams): MessageInformationData {
@@ -147,7 +149,7 @@ class MessageInformationDataFactory @Inject constructor(
     }
 
     private fun getE2EDecorationV2(roomSummary: RoomSummary?, event: Event): E2EDecoration {
-        if (roomSummary?.isEncrypted != true) {
+        if (roomSummary?.isEncrypted != true || vectorPreferences.isShieldVisibilityDisabled()) {
             // No decoration for clear room
             // Questionable? what if the event is E2E?
             return E2EDecoration.NONE
