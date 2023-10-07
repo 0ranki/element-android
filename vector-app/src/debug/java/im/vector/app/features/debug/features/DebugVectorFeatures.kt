@@ -76,6 +76,9 @@ class DebugVectorFeatures(
     override fun isNewAppLayoutFeatureEnabled(): Boolean = read(DebugFeatureKeys.newAppLayoutEnabled)
             ?: vectorFeatures.isNewAppLayoutFeatureEnabled()
 
+    override fun isShieldVisibilityDisabled(): Boolean = read(DebugFeatureKeys.shieldVisibilityDisabled)
+            ?: vectorFeatures.isShieldVisibilityDisabled()
+
     override fun isQrCodeLoginEnabled() = read(DebugFeatureKeys.qrCodeLoginEnabled)
             ?: vectorFeatures.isQrCodeLoginEnabled()
 
@@ -150,6 +153,7 @@ object DebugFeatureKeys {
     val screenSharing = booleanPreferencesKey("screen-sharing")
     val forceUsageOfOpusEncoder = booleanPreferencesKey("force-usage-of-opus-encoder")
     val newAppLayoutEnabled = booleanPreferencesKey("new-app-layout-enabled")
+    val shieldVisibilityDisabled = booleanPreferencesKey("shield-visibility-disabled")
     val qrCodeLoginEnabled = booleanPreferencesKey("qr-code-login-enabled")
     val qrCodeLoginForAllServers = booleanPreferencesKey("qr-code-login-for-all-servers")
     val reciprocateQrCodeLogin = booleanPreferencesKey("reciprocate-qr-code-login")
