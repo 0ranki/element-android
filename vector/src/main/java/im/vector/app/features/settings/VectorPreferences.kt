@@ -1126,7 +1126,7 @@ class VectorPreferences @Inject constructor(
      * Indicates whether or not thread messages are enabled.
      */
     fun areThreadMessagesEnabled(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_LABS_ENABLE_THREAD_MESSAGES, getDefault(R.bool.settings_labs_thread_messages_default))
+        return defaultPrefs.getBoolean(SETTINGS_LABS_ENABLE_THREAD_MESSAGES, false)
     }
 
     /**
@@ -1144,7 +1144,7 @@ class VectorPreferences @Inject constructor(
      * Should be removed when Threads flag will be removed
      */
     fun wasThreadFlagChangedManually(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_LABS_THREAD_MESSAGES_CHANGED_BY_USER, false)
+        return defaultPrefs.getBoolean(SETTINGS_LABS_THREAD_MESSAGES_CHANGED_BY_USER, true)
     }
 
     /**
@@ -1238,18 +1238,18 @@ class VectorPreferences @Inject constructor(
      * Indicates whether or not new session manager screens are enabled.
      */
     fun isNewSessionManagerEnabled(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_LABS_NEW_SESSION_MANAGER_KEY, getDefault(R.bool.settings_labs_new_session_manager_default))
+        return defaultPrefs.getBoolean(SETTINGS_LABS_NEW_SESSION_MANAGER_KEY, true)
     }
 
     /**
      * Indicates whether or not client info recording is enabled.
      */
     fun isClientInfoRecordingEnabled(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_LABS_CLIENT_INFO_RECORDING_KEY, getDefault(R.bool.settings_labs_client_info_recording_default))
+        return defaultPrefs.getBoolean(SETTINGS_LABS_CLIENT_INFO_RECORDING_KEY, true)
     }
 
     fun showLiveSenderInfo(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_TIMELINE_SHOW_LIVE_SENDER_INFO, getDefault(R.bool.settings_timeline_show_live_sender_info_default))
+        return defaultPrefs.getBoolean(SETTINGS_TIMELINE_SHOW_LIVE_SENDER_INFO, true)
     }
 
     fun isRichTextEditorEnabled(): Boolean {
@@ -1262,7 +1262,7 @@ class VectorPreferences @Inject constructor(
     }
 
     fun showIpAddressInSessionManagerScreens(): Boolean {
-        return defaultPrefs.getBoolean(SETTINGS_SESSION_MANAGER_SHOW_IP_ADDRESS, getDefault(R.bool.settings_session_manager_show_ip_address))
+        return defaultPrefs.getBoolean(SETTINGS_SESSION_MANAGER_SHOW_IP_ADDRESS, true)
     }
 
     fun setIpAddressVisibilityInDeviceManagerScreens(isVisible: Boolean) {
